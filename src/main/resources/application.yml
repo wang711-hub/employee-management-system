@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: employee-management
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/employee_management?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Tokyo}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: never
+
+app:
+  ai:
+    enabled: ${APP_AI_ENABLED:false}
+    api-key: ${APP_AI_API_KEY:}
+    base-url: ${APP_AI_BASE_URL:https://api.groq.com/openai}
+    model: ${APP_AI_MODEL:qwen/qwen3.8-27b}
+  demo-users:
+    enabled: ${APP_DEMO_USERS_ENABLED:false}
+    admin-username: ${APP_DEMO_ADMIN_USERNAME:admin}
+    admin-password: ${APP_DEMO_ADMIN_PASSWORD:}
+    viewer-username: ${APP_DEMO_VIEWER_USERNAME:viewer}
+    viewer-password: ${APP_DEMO_VIEWER_PASSWORD:}
+
+server:
+  port: 8080

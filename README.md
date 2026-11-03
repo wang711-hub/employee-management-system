@@ -100,7 +100,7 @@ AI API Key がなくても、社員管理・部署管理・ログイン・統計
 
 既定の <code>.\mvnw.cmd test</code> は H2 の MySQL 互換モードを使うため、MySQL サーバーや API Key がなくても実行できます。カバーする内容：
 
-この成果物の引き渡し前に <code>.\mvnw.cmd test</code> を実行しましたが、この環境には JDK がなく、Wrapper は <code>Java was not found</code> で停止しました。したがってテスト結果は未実行であり、成功とは扱っていません。JDK 21 を設定した PowerShell 環境で、上記コマンドを実行してください。MySQL を使ったブラウザー手動試験もこの環境では未実施です。実際の画面キャプチャや実験測定値は作成していません。
+ソースは JDK 21 でコンパイル確認済みです。テストコードは用意していますが、今回の公開前に <code>.\mvnw.cmd test</code> は実行していないため、テスト結果は未確認です。MySQL を使ったブラウザー手動試験も未実施です。実際の画面キャプチャや実験測定値は作成していません。
 
 - JPA Entity と Repository の関連・Enum・論理削除マッピング
 - 社員作成、重複工号、更新、論理削除、AI 検索上限20件
@@ -140,4 +140,3 @@ $env:RUN_MYSQL_INTEGRATION_TESTS = 'true'
 - [Spring AI 1.1.8 Tool Calling](https://docs.spring.io/spring-ai/reference/1.1/api/tools.html)
 - [Spring AI 1.1.8 Chat Client](https://docs.spring.io/spring-ai/reference/1.1/api/chatclient.html)
 - [Spring AI 1.1.x / Spring Boot 3.5 compatibility](https://github.com/spring-projects/spring-ai)
-

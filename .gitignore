@@ -1,0 +1,14 @@
+target/
+.mvn/wrapper/dists/
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+*.log
